@@ -1,0 +1,191 @@
+:root {
+  --body-background: white;
+  --navbar-background: black;
+  --search-div-background-color: rgb(92, 131, 190);
+  --search-button-bg: #195599;
+  --search-button-bg-hover: #123e70;
+  --welcome-background: rgb(25, 84, 151);
+  --search-button-color: whitesmoke;
+  --welcome-div-color: whitesmoke;
+  --word-div-background: rgb(166, 201, 230);
+  --pos-h5-color: #195599;
+  --no-words-color: #195599;
+  --navbar-links-color-main: rgb(233, 233, 233);
+  --navbar-links-color: rgba(255, 255, 255, 0.55);
+  --navbar-links-color-hover: rgb(190, 190, 190);
+  --recent-words-header-color: #195599;
+
+  --search-input-bg: white;
+  --part-of-speech-input-bg: white;
+  --search-input-color: black;
+  --part-of-speech-input-color: black;
+}
+
+body {
+  width: 100%;
+  background-color: var(--body-background);
+}
+
+.searchDiv {
+  background-color: var(--search-div-background-color);
+  display: flex;
+  margin: auto;
+  height: 80px;
+  padding: 20px;
+}
+
+.searchElementsDiv {
+  margin: auto;
+  display: flex;
+}
+
+.searchInput {
+  width: 300px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(88, 88, 88);
+  background-color: var(--search-input-bg);
+  color: var(--search-input-color);
+}
+
+.searchInput:focus {
+  border: 1px solid rgb(71, 71, 71);
+}
+
+.partOfSpeechSelect {
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: var(--part-of-speech-input-bg);
+  color: var(--part-of-speech-input-color);
+}
+
+.searchButton {
+  margin-left: 10px;
+  border-radius: 6px;
+  border: 0px;
+  padding: 2px 12px;
+  background-color: var(--search-button-bg);
+  color: var(--search-button-color);
+  transition: 0.5s;
+}
+
+.logoImage {
+  border-radius: 50%;
+}
+
+.searchButton:hover {
+  background-color: var(--search-button-bg-hover);
+  transition: 0.5s;
+}
+
+.dictionaryContainer {
+}
+
+.welcomeDiv {
+  padding: 20px;
+  color: var(--welcome-div-color);
+  background-color: var(--welcome-background);
+}
+
+.welcomeElementsDiv {
+  width: 50%;
+  margin: auto;
+}
+
+.wordDiv {
+  width: 60%;
+  padding: 40px 50px;
+  word-break: break-all;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--word-div-background);
+  border-radius: 10px;
+}
+
+.wordDiv:hover {
+  cursor: pointer;
+}
+
+.posH5 {
+  color: var(--pos-h5-color);
+  width: fit-content;
+}
+
+.posH5:hover {
+  text-decoration: underline;
+}
+
+.wordDescriptionDiv {
+  margin-left: 20px;
+}
+
+.noWordsMessagesP {
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--no-words-color);
+}
+
+.navbarLinkMain {
+  text-decoration: wavy;
+  color: var(--navbar-links-color-main);
+}
+
+.navbarLinkMain:hover {
+  color: var(--navbar-links-color-main);
+}
+
+.navbarLink {
+  text-decoration: wavy;
+  color: var(--navbar-links-color);
+  padding-right: 0.5rem;
+}
+
+.navbarLink:hover {
+  color: var(--navbar-links-color-hover);
+}
+
+.recentWordsDiv {
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--recent-words-header-color);
+}
+
+@media screen and (max-width: 500px) {
+  .searchDiv {
+    padding: 5px;
+  }
+
+  .partOfSpeechSelect {
+    margin-left: 2px;
+  }
+
+  .searchButton {
+    margin-left: 2px;
+  }
+
+  .searchInput {
+    width: 200px;
+  }
+
+  .searchInput:focus {
+    border: 1px solid rgb(71, 71, 71);
+  }
+
+  .welcomeElementsDiv {
+    width: 95%;
+  }
+
+  .wordDiv {
+    width: 95%;
+    padding: 20px 25px;
+  }
+}
