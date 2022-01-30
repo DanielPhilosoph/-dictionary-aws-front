@@ -1,7 +1,12 @@
+/**
+ * @param {number} max
+ * * Get random number from 0 to max
+ */
 export function getRandomInt(max: number): number {
   return Math.floor(Math.random() * max);
 }
 
+//* Get random part of speech
 export function getRandomPartOfSpeech() {
   const partOfSpeechMap = [
     "adverb",
@@ -15,10 +20,19 @@ export function getRandomPartOfSpeech() {
   return partOfSpeechMap[getRandomInt(partOfSpeechMap.length - 1)];
 }
 
+/**
+ * @param {string} str
+ * * Capitalize first letter of a string
+ */
 export function capitalizeFirstLetter(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
 
+/**
+ * @param {string} pos
+ * * Get short version of part of speech
+ * * Returns full part of speech string
+ */
 export function shortPosToFullPos(pos: string) {
   const partOfSpeechMap = [
     { "adv.": "adverb" },

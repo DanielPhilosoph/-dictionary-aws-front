@@ -8,7 +8,8 @@ export default function DictionaryMain() {
   const state: StateType = useSelector((state: StateType) => state);
 
   let display: string = "none";
-  if (state.currentWords.length === 0) {
+  const anyWordsToDisplay = state.currentWords.length === 0;
+  if (anyWordsToDisplay) {
     display = "block";
   }
 

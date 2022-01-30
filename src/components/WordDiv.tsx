@@ -12,9 +12,10 @@ export default function WordDiv(props: WordType) {
   const dispatch: Dispatch<any> = useDispatch();
 
   const onWordClick = async (event: React.MouseEvent<HTMLElement>) => {
-    //* 1- has target, 2- is an html element, 3- is pos element;
+    const hasTarget = Boolean(event.target);
+    //* 1- has target, 2- is an html element, 3- has class posH5;
     if (
-      event.target &&
+      hasTarget &&
       event.target instanceof HTMLElement &&
       event.target.classList.contains("posH5")
     ) {

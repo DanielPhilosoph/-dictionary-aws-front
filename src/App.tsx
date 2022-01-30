@@ -8,7 +8,10 @@ import WordPage from "./components/WordPage";
 import RecentWords from "./components/RecentWords";
 
 function App() {
+  //* Get state info
   const state: StateType = useSelector((state: StateType) => state);
+
+  //* Create routes based on recent searches
   const routes = state.recentSearches.map((word) => {
     return (
       <Route

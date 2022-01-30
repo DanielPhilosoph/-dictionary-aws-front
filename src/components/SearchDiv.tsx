@@ -10,8 +10,10 @@ export default function SearchDiv() {
   const partOfSpeech = useRef<HTMLSelectElement>(null);
 
   const onSearchClick = async () => {
+    //* Check if searchInput and partOfSpeech refs exists
     if (partOfSpeech.current != null && searchInput.current != null) {
-      if (searchInput.current.value === "") {
+      const isSearchInputEmpty = searchInput.current.value === "";
+      if (isSearchInputEmpty) {
         resetCurrentWords(dispatch);
       } else {
         await searchWord(

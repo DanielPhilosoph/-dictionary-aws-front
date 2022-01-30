@@ -5,20 +5,22 @@ import { Link } from "react-router-dom";
 import { light, dark } from "../helper/functions";
 
 export default function NavBar() {
+  //* If dark theme is chosen - turn dark
   const onDarkClick = () => {
     localStorage.setItem("theme", "dark");
     dark();
-    console.log("dark");
   };
 
+  //* If light theme is chosen - turn light
   const onLightClick = () => {
     localStorage.setItem("theme", "light");
     light();
-    console.log("light");
   };
 
-  if (!localStorage.getItem("theme")) {
+  const hasThemeInLocalStorage = localStorage.getItem("theme");
+  if (!hasThemeInLocalStorage) {
     localStorage.setItem("theme", "light");
+    //* Default - light theme
     light();
   } else if (localStorage.getItem("theme") === "dark") {
     dark();

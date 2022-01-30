@@ -10,6 +10,13 @@ import { shortPosToFullPos } from "../helper/functions";
 
 const rootUrl = "https://dd0fvn3a68.execute-api.eu-west-3.amazonaws.com";
 
+/**
+ * @param {Dispatch<any>} dispatch
+ * @param {string} word
+ * @param {string} partOfSpeech
+ ** Void function
+ ** Sends API request for the search - updates state
+ */
 export async function searchWord(
   dispatch: Dispatch<any>,
   word: string,
@@ -37,6 +44,13 @@ export async function searchWord(
   }
 }
 
+/**
+ * @param {Dispatch<any>} dispatch
+ * @param {string} pos
+ ** Void function
+ ** Sends API request to get random word with the specified pos.
+ ** Updates the state
+ */
 export async function getRandomWord(dispatch: Dispatch<any>, pos: string) {
   try {
     const randomPartOfSpeech = shortPosToFullPos(pos);
@@ -64,6 +78,10 @@ export async function getRandomWord(dispatch: Dispatch<any>, pos: string) {
   }
 }
 
+/**
+ * @param {Dispatch<any>} dispatch
+ ** Reset current words - updates state
+ */
 export function resetCurrentWords(dispatch: Dispatch<any>) {
   const action = {
     type: RESET_CURRENT_WORDS,
