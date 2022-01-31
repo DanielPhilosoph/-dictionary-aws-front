@@ -10,6 +10,20 @@
 - [x] The user can choose to get the word meaning with a specific part of speech.
 - [x] The user can click on the part of speech of the word, and it will find a random word with the same part of speech.
 - [x] The user can watch his last searches on the "Recent Words" in the navbar. (NOTE - saves word for the specific page only).
-- [x] The user can change the page's theme (light or dark).  
+- [x] The user can change the page's theme (light or dark). 
+
+## Technologies
+
+- AWS (S3, DynamoDB)
+- Serverless
+- React
+- Express server
+
+### Languages
+
+- JavaScript
+- TypeScript
+
+
 
 
